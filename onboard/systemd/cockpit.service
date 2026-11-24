@@ -1,0 +1,19 @@
+# Pi 5 user unit (install_services.sh). D435 + Hailo depth + teleop/autonomy page on :8090, reached over
+# Tailscale (http://<pi>:8090). --failsafes-auto: it verifies L1/L2/L3b itself and stays DRY RUN
+# while any is missing -- at boot there is no human to assert them. Driving still needs a held key / deadman.
+[Unit]
+Description=DANIEL cockpit (:8090)
+After=board-server.service
+Wants=board-server.service
+
+[Service]
+WorkingDirectory=%h/DANIEL/onboard
+Environment=PYTHONUNBUFFERED=1
+# the USB camera and the Hailo driver settle at boot
+ExecStartPre=/bin/sleep 5
+ExecStart=%h/daniel-venv/bin/python cockpit.py --failsafes-auto
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target

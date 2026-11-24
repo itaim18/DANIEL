@@ -1,0 +1,33 @@
+
+# Installed on the Q6A and the Pi 5 at /etc/systemd/system/pwm-safe-boot.service.
+# After the 2026-07-21 runaway (SoC froze mid-drive, PCA9685 kept generating
+# the last forward pulse with the watchdog dead), every boot now force-clears
+# all PCA9685 outputs (ALL_LED_OFF_H full-off bit) before anything else can
+# run. Paired with the systemd hardware watchdog (RuntimeWatchdogSec), this
+# bounds a freeze-runaway to roughly watchdog timeout + boot time.
+[Unit]
+Description=Force PCA9685 PWM outputs off at boot (RC runaway protection)
+
+[Service]
+Type=oneshot
+# Q6A: i2c-6. Pi 5 (header pins 3/5): i2c-1 via a drop-in, so this file stays
+# identical on both boards:
+#   /etc/systemd/system/pwm-safe-boot.service.d/bus.conf = [Service] Environment=I2C_BUS=1
+Environment=I2C_BUS=6
+# Retry the WRITE, not the device node -- fixed 2026-08-24 after this unit failed
+# at a boot where the car WAS powered and 0x40 WAS answering seconds later.
+#
+# The old line was:
+#   for i in $(seq 60); do [ -e /dev/i2c-6 ] && exec i2cset ...; sleep 0.5; done
+# `exec` replaces the shell on the FIRST iteration where the node exists, so the
+# whole 30 s retry budget went to waiting for /dev/i2c-6 -- which is present very
+# early -- and ZERO retries went to the write, which is the part that actually
+# fails. The PCA9685 is fed by the ESC's BEC, so if the board boots before the
+# servo rail settles the write NAKs once ("Error: Write failed") and the unit
+# dies, leaving stale PWM uncleared. That is precisely the runaway this exists to
+# prevent. Now it retries the write itself for 30 s and exits 0 the moment the
+# chip acknowledges.
+ExecStart=/bin/sh -c 'for i in $(seq 60); do i2cset -y ${I2C_BUS} 0x40 0xFD 0x10 2>/dev/null && exit 0; sleep 0.5; done; echo "PCA9685 never acknowledged at i2c-${I2C_BUS}/0x40 in 30 s" >&2; exit 1'
+
+[Install]
+WantedBy=multi-user.target

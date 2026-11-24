@@ -1,0 +1,199 @@
+{
+ "office_chair": {
+  "w": 0.631,
+  "d": 0.651,
+  "h": 1.177,
+  "radius": 0.316,
+  "src": "Isaac/Environments/Office/Props/SM_ChairOffice.usd",
+  "mpu": 1.0,
+  "up": "Z"
+ },
+ "chair": {
+  "w": 0.6,
+  "d": 0.599,
+  "h": 0.877,
+  "radius": 0.36,
+  "src": "Isaac/Environments/Office/Props/SM_Chair.usd",
+  "mpu": 1.0,
+  "up": "Z",
+  "legs": [
+   [
+    0.27,
+    -0.21
+   ],
+   [
+    0.27,
+    0.21
+   ]
+  ],
+  "leg_r": 0.04
+ },
+ "traffic_cone": {
+  "w": 0.336,
+  "d": 0.334,
+  "h": 0.463,
+  "radius": 0.167,
+  "src": "Isaac/Environments/Simple_Warehouse/Props/S_TrafficCone.usd",
+  "mpu": 1.0,
+  "up": "Z"
+ },
+ "cardboard_box": {
+  "w": 0.7,
+  "d": 0.5,
+  "h": 0.5,
+  "radius": 0.366,
+  "src": "Isaac/Environments/Simple_Warehouse/Props/SM_CardBoxA_01.usd",
+  "mpu": 1.0,
+  "up": "Z",
+  "box": [
+   0.7,
+   0.5
+  ]
+ },
+ "barrel": {
+  "w": 0.6,
+  "d": 0.708,
+  "h": 0.901,
+  "radius": 0.3,
+  "src": "Isaac/Environments/Simple_Warehouse/Props/SM_BarelPlastic_A_01.usd",
+  "mpu": 1.0,
+  "up": "Z"
+ },
+ "trash_can": {
+  "w": 0.3,
+  "d": 0.3,
+  "h": 0.715,
+  "radius": 0.15,
+  "src": "Isaac/Environments/Office/Props/SM_TrashCan.usd",
+  "mpu": 1.0,
+  "up": "Z"
+ },
+ "wet_floor_sign": {
+  "w": 0.267,
+  "d": 0.232,
+  "h": 0.644,
+  "radius": 0.15,
+  "src": "Isaac/Environments/Simple_Warehouse/Props/S_WetFloorSign.usd",
+  "mpu": 1.0,
+  "up": "Z",
+  "box": [
+   0.267,
+   0.232
+  ]
+ },
+ "school_chair": {
+  "w": 0.566,
+  "d": 0.675,
+  "h": 1.006,
+  "radius": 0.374,
+  "src": "chair/SchoolChair_01.usd",
+  "mpu": 1.0,
+  "up": "Z",
+  "legs": [
+   [
+    -0.27,
+    -0.33
+   ],
+   [
+    -0.27,
+    -0.27
+   ],
+   [
+    -0.27,
+    -0.21
+   ],
+   [
+    -0.27,
+    -0.15
+   ],
+   [
+    -0.27,
+    0.09
+   ],
+   [
+    -0.27,
+    0.15
+   ],
+   [
+    -0.27,
+    0.21
+   ],
+   [
+    -0.27,
+    0.27
+   ],
+   [
+    -0.27,
+    0.33
+   ],
+   [
+    0.27,
+    -0.33
+   ],
+   [
+    0.27,
+    -0.27
+   ],
+   [
+    0.27,
+    -0.21
+   ],
+   [
+    0.27,
+    -0.15
+   ],
+   [
+    0.27,
+    0.09
+   ],
+   [
+    0.27,
+    0.15
+   ],
+   [
+    0.27,
+    0.21
+   ],
+   [
+    0.27,
+    0.27
+   ],
+   [
+    0.27,
+    0.33
+   ]
+  ],
+  "leg_r": 0.04
+ },
+ "crate": {
+  "w": 0.825,
+  "d": 0.409,
+  "h": 0.35,
+  "radius": 0.391,
+  "src": "cargo/wooden_crate_01.usd",
+  "mpu": 1.0,
+  "up": "Z",
+  "box": [
+   0.825,
+   0.409
+  ]
+ },
+ "person": {
+  "w": 0.879,
+  "d": 0.42,
+  "h": 1.773,
+  "radius": 0.25,
+  "src": "male_adult_construction_05_new_posed_baked.usdc",
+  "mpu": 1.0,
+  "up": "Z"
+ },
+ "person_b": {
+  "w": 0.673,
+  "d": 0.349,
+  "h": 1.607,
+  "radius": 0.25,
+  "src": "F_Business_02_posed_baked.usdc",
+  "mpu": 1.0,
+  "up": "Z"
+ }
+}

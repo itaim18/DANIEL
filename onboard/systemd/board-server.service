@@ -1,0 +1,15 @@
+# Pi 5 user unit (install_services.sh). PWM to the PCA9685 on i2c-1: ch0 steer, ch3 throttle, 0.4 s deadman.
+# Failsafe L3b: ExecStopPost cuts every PWM output on ANY exit, kill -9 / OOM included (2026-10-07).
+[Unit]
+Description=DANIEL board_server (PWM + deadman)
+
+[Service]
+WorkingDirectory=%h/DANIEL/car
+Environment=I2C_BUS=1 PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 board_server.py --no-video
+ExecStopPost=/usr/sbin/i2cset -y 1 0x40 0xFD 0x10
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Seeing to Drive on a Single Board: Attention-Free Depth for Onboard Robot Navigation"
+authors:
+  - given-names: Itai
+    family-names: Mizlish
+    affiliation: Ariel University
+  - given-names: Boaz
+    family-names: Ben-Moshe
+    affiliation: Ariel University
+date-released: 2026-11-24
+url: "https://itaim18.github.io/seeing-to-drive/"
+repository-code: "https://github.com/itaim18/DANIEL"
+license: MIT
+identifiers:
+  - type: doi
+    value: 10.48550/arXiv.2611.32718
+    description: The paper on arXiv
+preferred-citation:
+  type: article
+  title: "Seeing to Drive on a Single Board: Attention-Free Depth for Onboard Robot Navigation"
+  authors:
+    - given-names: Itai
+      family-names: Mizlish
+    - given-names: Boaz
+      family-names: Ben-Moshe
+  year: 2026
+  journal: arXiv preprint
+  doi: 10.48550/arXiv.2611.32718
+  url: "https://arxiv.org/abs/2611.32718"

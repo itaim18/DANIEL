@@ -1,0 +1,2 @@
+input_norm = normalization(NORM)
+model_optimization_flavor(optimization_level=1, compression_level=0)

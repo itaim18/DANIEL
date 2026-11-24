@@ -1,0 +1,10 @@
+data/
+models/
+run/
+recordings/
+maps/
+__pycache__/
+*.pyc
+paper/*.log
+paper/*.aux
+paper/*.blg

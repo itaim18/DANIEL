@@ -1,0 +1,333 @@
+{
+ "yaw0": 0.0,
+ "cam_h": -0.25300002098083496,
+ "intr": {
+  "fx": 363.8997802734375,
+  "fy": 363.8997802734375,
+  "cx": 252.0,
+  "cy": 140.0
+ },
+ "q_min": 0.65,
+ "scenarios": [
+  {
+   "name": "00_chair_center",
+   "pattern": "chair_center",
+   "start": [
+    -7.355000019073486,
+    2.2149999141693115
+   ],
+   "goal": [
+    -3.855,
+    2.215
+   ],
+   "length_m": 3.5,
+   "yaw0": 0.0,
+   "goal_offset_deg": 0,
+   "props": [
+    {
+     "type": "office_chair",
+     "x": -5.78,
+     "y": 2.215,
+     "yaw": 1.215
+    }
+   ]
+  },
+  {
+   "name": "01_box_offset",
+   "pattern": "box_offset",
+   "start": [
+    -6.554999828338623,
+    2.115000009536743
+   ],
+   "goal": [
+    -3.555,
+    2.115
+   ],
+   "length_m": 3.0,
+   "yaw0": 0.0,
+   "goal_offset_deg": 0,
+   "props": [
+    {
+     "type": "cardboard_box",
+     "x": -5.355,
+     "y": 2.365,
+     "yaw": 1.36
+    },
+    {
+     "type": "trash_can",
+     "x": -4.305,
+     "y": 1.765,
+     "yaw": -2.385
+    }
+   ]
+  },
+  {
+   "name": "02_cone_slalom",
+   "pattern": "cone_slalom",
+   "start": [
+    -6.65500020980835,
+    1.1150000095367432
+   ],
+   "goal": [
+    -3.191,
+    3.115
+   ],
+   "length_m": 4.0,
+   "yaw0": 0.0,
+   "goal_offset_deg": 30,
+   "props": [
+    {
+     "type": "traffic_cone",
+     "x": -5.964,
+     "y": 1.918,
+     "yaw": 1.529
+    },
+    {
+     "type": "traffic_cone",
+     "x": -4.921,
+     "y": 1.712,
+     "yaw": -2.459
+    },
+    {
+     "type": "traffic_cone",
+     "x": -4.578,
+     "y": 2.718,
+     "yaw": 1.869
+    },
+    {
+     "type": "traffic_cone",
+     "x": -3.536,
+     "y": 2.512,
+     "yaw": 1.01
+    }
+   ]
+  },
+  {
+   "name": "03_gate",
+   "pattern": "gate",
+   "start": [
+    -5.855000019073486,
+    1.315000057220459
+   ],
+   "goal": [
+    -3.257,
+    2.815
+   ],
+   "length_m": 3.0,
+   "yaw0": 0.0,
+   "goal_offset_deg": 30,
+   "props": [
+    {
+     "type": "barrel",
+     "x": -5.061,
+     "y": 2.64,
+     "yaw": -1.641
+    },
+    {
+     "type": "barrel",
+     "x": -4.311,
+     "y": 1.34,
+     "yaw": 0.437
+    }
+   ]
+  },
+  {
+   "name": "04_chair_cluster",
+   "pattern": "chair_cluster",
+   "start": [
+    -6.454999923706055,
+    0.2150000035762787
+   ],
+   "goal": [
+    -3.857,
+    1.715
+   ],
+   "length_m": 3.0,
+   "yaw0": 0.0,
+   "goal_offset_deg": 30,
+   "props": [
+    {
+     "type": "chair",
+     "x": -5.696,
+     "y": 1.0,
+     "yaw": 2.637
+    },
+    {
+     "type": "school_chair",
+     "x": -4.826,
+     "y": 0.694,
+     "yaw": -2.828
+    },
+    {
+     "type": "office_chair",
+     "x": -4.606,
+     "y": 1.513,
+     "yaw": 1.333
+    }
+   ]
+  },
+  {
+   "name": "05_person_on_path",
+   "pattern": "person_on_path",
+   "start": [
+    -7.454999923706055,
+    3.7149999141693115
+   ],
+   "goal": [
+    -3.991,
+    1.715
+   ],
+   "length_m": 4.0,
+   "yaw0": 0.0,
+   "goal_offset_deg": -30,
+   "props": [
+    {
+     "type": "person",
+     "x": -5.723,
+     "y": 2.715,
+     "yaw": 1.115
+    }
+   ]
+  },
+  {
+   "name": "06_mixed_clutter",
+   "pattern": "mixed_clutter",
+   "start": [
+    -6.454999923706055,
+    3.2149999141693115
+   ],
+   "goal": [
+    -3.857,
+    1.715
+   ],
+   "length_m": 3.0,
+   "yaw0": 0.0,
+   "goal_offset_deg": -30,
+   "props": [
+    {
+     "type": "traffic_cone",
+     "x": -5.826,
+     "y": 2.505,
+     "yaw": 0.781
+    },
+    {
+     "type": "cardboard_box",
+     "x": -4.956,
+     "y": 2.811,
+     "yaw": 0.812
+    },
+    {
+     "type": "chair",
+     "x": -5.069,
+     "y": 1.895,
+     "yaw": -1.153
+    },
+    {
+     "type": "trash_can",
+     "x": -4.327,
+     "y": 2.102,
+     "yaw": -3.001
+    },
+    {
+     "type": "wet_floor_sign",
+     "x": -4.966,
+     "y": 3.394,
+     "yaw": -0.721
+    }
+   ]
+  },
+  {
+   "name": "07_crate_wall_gap",
+   "pattern": "crate_wall_gap",
+   "start": [
+    -6.755000114440918,
+    -1.4850000143051147
+   ],
+   "goal": [
+    -4.505,
+    2.412
+   ],
+   "length_m": 4.5,
+   "yaw0": 0.0,
+   "goal_offset_deg": 60,
+   "props": [
+    {
+     "type": "crate",
+     "x": -6.106,
+     "y": 0.739,
+     "yaw": 2.264
+    },
+    {
+     "type": "crate",
+     "x": -5.154,
+     "y": 0.189,
+     "yaw": 0.136
+    },
+    {
+     "type": "wet_floor_sign",
+     "x": -5.068,
+     "y": 1.438,
+     "yaw": -1.426
+    }
+   ]
+  },
+  {
+   "name": "08_person_and_cones",
+   "pattern": "person_and_cones",
+   "start": [
+    -5.954999923706055,
+    -0.8849999904632568
+   ],
+   "goal": [
+    -3.705,
+    3.012
+   ],
+   "length_m": 4.5,
+   "yaw0": 0.0,
+   "goal_offset_deg": 60,
+   "props": [
+    {
+     "type": "person_b",
+     "x": -4.977,
+     "y": 1.408,
+     "yaw": -1.69
+    },
+    {
+     "type": "traffic_cone",
+     "x": -4.908,
+     "y": 0.329,
+     "yaw": 0.144
+    },
+    {
+     "type": "traffic_cone",
+     "x": -4.094,
+     "y": 1.938,
+     "yaw": 1.972
+    }
+   ]
+  },
+  {
+   "name": "09_barrel_center",
+   "pattern": "barrel_center",
+   "start": [
+    -5.554999828338623,
+    0.11500000208616257
+   ],
+   "goal": [
+    -3.305,
+    4.012
+   ],
+   "length_m": 4.5,
+   "yaw0": 0.0,
+   "goal_offset_deg": 60,
+   "props": [
+    {
+     "type": "barrel",
+     "x": -4.473,
+     "y": 2.089,
+     "yaw": -2.874
+    }
+   ]
+  }
+ ]
+}

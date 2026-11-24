@@ -1,0 +1,17 @@
+# Pi 5 user unit (install_services.sh). The Pi's own copy of every cockpit run -- the same /record
+# stream the laptop's daniel-recorder writes -- into ~/DANIEL/recordings/<date>_cockpit/.
+# run_record.py starts no new run below 10 GB free, so the SD card never fills under the cockpit.
+[Unit]
+Description=DANIEL run recorder, Pi copy (cockpit runs -> experiments/)
+After=cockpit.service
+
+[Service]
+WorkingDirectory=%h/DANIEL
+ExecStart=%h/daniel-venv/bin/python onboard/run_record.py --pi 127.0.0.1
+# the brain shares these 4 cores: video encoding yields to it
+Nice=10
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

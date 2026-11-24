@@ -1,0 +1,21 @@
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Model & \multicolumn{2}{c}{AbsRel$\downarrow$} & $\delta_1\uparrow$ & $r\uparrow$ & Speed \\
+\cmidrule(lr){2-3}
+ & all & obst. & all & real & \\
+\midrule
+\multicolumn{6}{@{}l}{\emph{On the Hailo-8L (int8), FPS on the Pi}} \\
+\textbf{Ours, student v5} & 0.269 & \textbf{0.197} & 0.669 & 0.996 & 27.1 \\
+Ours, student v3 & \textbf{0.269} & 0.204 & 0.674 & 0.995 & 27.1 \\
+DAv2-S, Hailo zoo & 0.354 & 0.334 & 0.593 & 0.979 & 21.6 \\
+DAv2-S, our int8 & 0.477 & 0.330 & 0.423 & 0.982 & 16.6 \\
+SC-DepthV3, zoo & 0.414 & 0.352 & 0.506 & 0.950 & 53.6 \\
+FastDepth, zoo & 0.530 & 0.767 & 0.344 & 0.709 & 121.3 \\
+\midrule
+\multicolumn{6}{@{}l}{\emph{Float on the RTX 5090 GPU, ms per frame}} \\
+DAv2-L (teacher) & 0.284 & 0.144 & 0.643 & 1.000 & 175\,ms \\
+DAv2-S & 0.283 & 0.150 & 0.651 & 0.999 & 39\,ms \\
+DA3-Small & 0.315 & 0.172 & 0.611 & 0.988 & 42\,ms \\
+DA3-Base & 0.304 & 0.188 & 0.616 & 0.985 & 40\,ms \\
+\bottomrule
+\end{tabular}

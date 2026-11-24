@@ -1,0 +1,16 @@
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Configuration & $n$ & Clean & Reached \\
+\midrule
+Oracle: exact props, lockstep & 5 & 9.8 $\pm$ 0.4 & 10.0 \\
+Real time, exact obstacles & 5 & 9.2 $\pm$ 0.4 & 9.8 \\
+\midrule
+Student v3, GT pose & 10 & 7.9 $\pm$ 1.0 & 9.0 \\
+\textbf{Student v5, GT pose} & 10 & 7.9 $\pm$ 1.1 & 9.0 \\
+\midrule
+Student v3, own pose & 10 & 7.1 $\pm$ 0.9 & 7.4 \\
+\textbf{Student v5, own pose} & 10 & 7.7 $\pm$ 0.7 & 8.1 \\
+\textbf{v5, own pose, real Pi + Hailo} & 5 & 8.2 $\pm$ 0.4 & 8.4 \\
+Camera-only VO (v1, earlier planner) & 5 & 2.6 $\pm$ 0.9 & 3.6 \\
+\bottomrule
+\end{tabular}
